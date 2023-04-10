@@ -1,0 +1,234 @@
+.starLogoSvg {
+  color: rgb(27, 183, 255);
+}
+
+.ringColor {
+  --ringColor: red;
+}
+
+:root {
+  --darkPurple: #261328;
+  --cardGradient: linear-gradient(140deg, rgba(236,90,40,1) 0%,
+    rgba(236,90,40,1) 17%,
+    rgba(241,133,35,1) 36%,
+    rgba(241,133,35,1) 55%,
+    rgba(250,175,36,1) 68%,
+    rgba(250,175,36,1) 100%);
+  --certsGradient: linear-gradient(200deg, rgba(236,90,40,1) 0%,
+    rgba(236,90,40,1) 17%,
+    rgba(241,133,35,1) 36%,
+    rgba(241,133,35,1) 55%,
+    rgba(250,175,36,1) 68%,
+    rgba(250,175,36,1) 100%);
+  --languagesGradient: linear-gradient(20deg, rgba(236,90,40,1) 0%,
+    rgba(236,90,40,1) 17%,
+    rgba(241,133,35,1) 36%,
+    rgba(241,133,35,1) 55%,
+    rgba(250,175,36,1) 68%,
+    rgba(250,175,36,1) 100%);
+  --contactGradient: linear-gradient(0deg, rgba(236,90,40,1) 0%,
+    rgba(236,90,40,1) 17%,
+    rgba(241,133,35,1) 36%,
+    rgba(241,133,35,1) 55%,
+    rgba(250,175,36,1) 68%,
+    rgba(250,175,36,1) 100%);
+  --cardGradientFallback: rgba(241,133,35,1);
+  --electricYellow: #FCFE2F;
+  --brightPurple: #9A44B7;
+  --contactGradient: linear-gradient(180deg, rgba(250,175,36,1) 5%, rgba(254,80,16,1) 25%, rgba(250,88,36,1) 40%, rgba(250,36,204,1) 100%);
+  
+}
+
+body {
+  background-color: var(--darkPurple);
+  text-align: center;
+  color: var(--darkPurple);
+}
+
+a{
+  color: inherit;
+}
+
+#heroSection {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--darkPurple);
+}
+
+#heroContainer {
+  height: 40vh;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+
+section {
+  max-width:55rem;
+  margin: 0 auto;
+  padding: 8rem 0;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 4vw;
+}
+
+.colorTest{
+  color: rgb(255, 0, 221);
+  width: 40px;
+  height: 40px;
+}
+
+.noMarkers {
+  list-style: none;
+  padding-left: 0;
+}
+
+.svgHolder {
+  height: 40px;
+  width: auto;
+  color: #3D0060;
+  fill: currentColor;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.svgHolder:hover {
+  color: #2A3E87;
+  fill: url(#sunray);
+  /* border: 3px solid rgb(218, 211, 211); */
+  /* background: rgb(231,242,255);
+  background: linear-gradient(169deg, rgba(255,255,255,1) 0%, rgba(115,115,115,1) 60%, rgba(166,166,166,1) 98%);
+ */
+}
+
+.sideList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pythonColors{
+  /*
+  --topSnakeColor: lightgreen;*/
+}
+
+.pythonColors:hover{
+  --topSnakeColor: var(--electricYellow);
+}
+
+.cloudTest{
+  /*
+  left: 40rem;
+  */
+  right: 0;
+  top: 26vh;
+  position: absolute;
+}
+
+.cloudMachine {
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /*
+  ios please support clip im literally begging you
+  */
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+.cloud{
+  z-index: -4;
+}
+
+
+#aboutSection {
+  max-width:50rem;
+  text-align: justify;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+}
+
+.aboutBackground {
+  padding: 1rem;
+  background: var(--cardGradientFallback);
+  background: var(--cardGradient);
+  font-weight: 600;
+  border-radius: 1rem;
+  border-bottom: solid 2px var(--electricYellow);
+  border-right: solid 2px var(--electricYellow);
+}
+
+.aboutBackground:last-of-type {
+  padding-bottom: 0;
+}
+
+#experienceSection{
+  width: 100%;
+}
+
+#certifications {
+  background: var(--cardGradientFallback);
+  background: var(--certsGradient);
+  right: 0;
+  padding: 1rem;
+  margin-left: auto;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  border-bottom: solid 2px var(--electricYellow);
+  border-left: solid 2px var(--electricYellow);
+  max-width: 35rem;
+}
+
+#languages{
+  background: var(--cardGradientFallback);
+  background: var(--languagesGradient);
+  left: 0;
+  padding: 1rem;
+  max-width: 35rem;
+  margin-right: auto;
+  border-radius: 1rem;
+  border-top: solid 2px var(--electricYellow);
+  border-right: solid 2px var(--electricYellow);
+}
+
+#contactSection{
+  max-width: 40rem;
+}
+
+#contactEmail {
+  background: var(--cardGradientFallback);
+  background: var(--contactGradient);
+  left: 0;
+  padding: 1rem;
+  margin: auto;
+  border-radius: 1rem;
+  font-weight: 600;
+  border-top: solid 2px var(--electricYellow);
+}
+
+#emailLink{
+  border: 2px solid purple;
+  border-radius: 3rem;
+  padding: .75rem;
+  margin:0;
+  background-color: lightpink;
+  text-decoration:none;
+  display:inline-block;
+  width: 75%;
+}
+
+h5 {
+  margin-bottom: 0;
+}
