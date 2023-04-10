@@ -1,0 +1,13 @@
+/* === Import Bootstrap functions and variables === */
+@import "//node_modules/bootstrap/scss/functions";
+@import "//node_modules/bootstrap/scss/variables";
+/*-------------------------------------------------------------------*/
+/* Change theme-colors */
+$theme-colors: (
+    dark: #261328,
+    );
+        
+/*-------------------------------------------------------------------*/
+/* === Bootstrap Main SCSS === */
+@import "//node_modules/bootstrap/scss/bootstrap";
+/*-------------------------------------------------------------------*/
