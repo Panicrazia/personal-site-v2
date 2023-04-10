@@ -1,7 +1,7 @@
 //import './App.css';
 import React, {Component, useLayoutEffect, useRef} from 'react';
 import { Container, Nav, Navbar, Image } from 'react-bootstrap';
-import './App.scss';
+import './App.scss'
 import Logo from './images/StarMLogo.svg';
 import IconLogo from "./components/icons/logo";
 import IconSynthLogo from './components/icons/personal synthwave logo';
@@ -48,7 +48,7 @@ class Navigator extends Component {
     return (
       <Navbar collapseOnSelect bg="dark" expand="lg" variant="dark" fixed="top">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="#heroSection">
             <IconSynthLogo width="50" height="50" />
             {/** 
             <IconLogo classProp="starLogoSvg ringColor" width="50" height="50"/>&nbsp;Mackenzie May
@@ -57,9 +57,9 @@ class Navigator extends Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home">About</Nav.Link>
-              <Nav.Link href="#ko">Experience</Nav.Link>
-              <Nav.Link href="#home">Contact</Nav.Link>
+              <Nav.Link href="#aboutSection">About</Nav.Link>
+              <Nav.Link href="#experienceSection">Experience</Nav.Link>
+              <Nav.Link href="#contactSection">Contact</Nav.Link>
               <Nav.Link href="#home">Resume</Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -141,7 +141,6 @@ class CloudMachine extends Component {
     )
   }
 }
-
 
 class About extends Component {
   render(){
@@ -227,7 +226,7 @@ class Contact extends Component {
         <div id="contactEmail">
           <h3>Want to talk?</h3>
           <p>Im looking for new opportunities and learning experiences, if you think I might be a good fit or just want to chat then my email is open, Ill try my best to get back to you.</p>
-          <a id="emailLink" href={"mailto:"+email} rel="noopener noreferrer" target="_blank"><h5>Get in touch</h5></a>
+          <a id="emailLink" href={"mailto:"+email} rel="noopener noreferrer" target="_blank"><span id="contactButton">Get in touch</span></a>
         </div>
       </section>
     );
