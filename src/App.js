@@ -25,6 +25,9 @@ import LongCloud1 from './images/clouds/LongCloud1';
 import { gsap } from 'gsap';
 import ProfilePicture from './images/logo.svg';
 import { email } from './components/config';
+import responsiveWebDesignCertificate from "./images/certifications/responsiveWebDesignCertificate.png";
+import javascriptCertificate from "./images/certifications/javascriptCertificate.png";
+import frontEndCertificate from "./images/certifications/frontEndCertificate.png";
 
 class App extends Component {
   render(){
@@ -189,7 +192,21 @@ class Experience extends Component {
         <div id="certifications">
           <h3>Here are some certifications I have, and ones I am gunning for in the future</h3>
           <ul className="noMarkers">
-            <li></li>
+            <li>
+              <a href="https://www.freecodecamp.org/certification/Mackenzie-May/responsive-web-design">
+                <img src={responsiveWebDesignCertificate} alt="responsiveCert" width="500" display="block"/>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.freecodecamp.org/certification/Mackenzie-May/javascript-algorithms-and-data-structures">
+                <img src={javascriptCertificate} alt="javascriptCert" width="500" display="block"/>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.freecodecamp.org/certification/Mackenzie-May/front-end-development-libraries">
+                <img src={frontEndCertificate} alt="frontendCert" width="500" display="block"/>
+              </a>
+            </li>
           </ul>
         </div>
         <div id="languages">
