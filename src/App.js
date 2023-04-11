@@ -2,9 +2,6 @@
 import React, {Component, useLayoutEffect, useRef} from 'react';
 import { Container, Nav, Navbar, Image } from 'react-bootstrap';
 import './App.scss'
-import Logo from './images/StarMLogo.svg';
-import IconLogo from "./components/icons/logo";
-import IconSynthLogo from './components/icons/personal synthwave logo';
 import HTML5Logo from "./components/icons/html5";
 import CSS3Logo from "./components/icons/css3";
 import JavascriptLogo from './components/icons/javascript';
@@ -28,6 +25,8 @@ import { email } from './components/config';
 import responsiveWebDesignCertificate from "./images/certifications/responsiveWebDesignCertificate.png";
 import javascriptCertificate from "./images/certifications/javascriptCertificate.png";
 import frontEndCertificate from "./images/certifications/frontEndCertificate.png";
+import Navbar2 from './components/dissapearingNavBar';
+import Certifications from './components/certifications';
 
 class App extends Component {
   render(){
@@ -49,28 +48,11 @@ class App extends Component {
 class Navigator extends Component {
   render(){
     return (
-      <Navbar collapseOnSelect bg="dark" expand="lg" variant="dark" fixed="top">
-        <Container>
-          <Navbar.Brand href="#heroSection">
-            <IconSynthLogo width="50" height="50" />
-            {/** 
-            <IconLogo classProp="starLogoSvg ringColor" width="50" height="50"/>&nbsp;Mackenzie May
-            */}
-            </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="#aboutSection">About</Nav.Link>
-              <Nav.Link href="#experienceSection">Experience</Nav.Link>
-              <Nav.Link href="#contactSection">Contact</Nav.Link>
-              <Nav.Link href="#home">Resume</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <Navbar2 />
     );
   }
 }
+
 
 class Hero extends Component {
   render(){
@@ -189,26 +171,8 @@ class Experience extends Component {
   render(){
     return (
       <section id="experienceSection">
-        <div id="certifications">
-          <h3>Here are some certifications I have, and ones I am gunning for in the future</h3>
-          <ul className="noMarkers">
-            <li>
-              <a href="https://www.freecodecamp.org/certification/Mackenzie-May/responsive-web-design">
-                <img src={responsiveWebDesignCertificate} alt="responsiveCert" width="500" display="block"/>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.freecodecamp.org/certification/Mackenzie-May/javascript-algorithms-and-data-structures">
-                <img src={javascriptCertificate} alt="javascriptCert" width="500" display="block"/>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.freecodecamp.org/certification/Mackenzie-May/front-end-development-libraries">
-                <img src={frontEndCertificate} alt="frontendCert" width="500" display="block"/>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <Certifications></Certifications>
+        
         <div id="languages">
           <h3>Some technologies Ive used to make things</h3>
           <ul className="noMarkers sideList">
@@ -235,6 +199,29 @@ class Experience extends Component {
     );
   }
 }
+
+{/**
+<div id="certifications">
+  <h3>Here are some certifications I have, and ones I am gunning for in the future</h3>
+  <ul className="noMarkers">
+    <li>
+      <a href="https://www.freecodecamp.org/certification/Mackenzie-May/responsive-web-design">
+        <img src={responsiveWebDesignCertificate} alt="responsiveCert" width="500" display="block"/>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.freecodecamp.org/certification/Mackenzie-May/javascript-algorithms-and-data-structures">
+        <img src={javascriptCertificate} alt="javascriptCert" width="500" display="block"/>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.freecodecamp.org/certification/Mackenzie-May/front-end-development-libraries">
+        <img src={frontEndCertificate} alt="frontendCert" width="500" display="block"/>
+      </a>
+    </li>
+  </ul>
+</div>
+*/}
 
 class Contact extends Component {
   render(){
