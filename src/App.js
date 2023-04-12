@@ -140,9 +140,8 @@ class About extends Component {
             (both modding them and attempting to make my own) 
             and learned html and css for small projects when I couldn't find 
             anything to suit my needs, like a customized new tab.
-          </p>
-          <p>
-            Ive mostly made money by doing crafts and small projects to 
+            <br/><br/>
+            Ive mostly made money by doing art and small projects to 
             supplement income from working in the finance industry, which then got traction 
             into making enough money to do full time. Problem is though, Ive now 
             aged out of my parents healthcare and this added cost has made this non-viable, 
@@ -150,13 +149,17 @@ class About extends Component {
             industry? Ive always been interested in that as a long term goal if I 
             was not able to sustain myself via my own business, not even mentioning 
             how it opens up a lot of possibilities for making my own business.
-          </p>
-          <p>
+            <br/><br/>
+            I am extremely interested in the new AI revolution happening now, 
+            and how much it will make code easier to write, this very site has 
+            components created by AI, such as the navbar with how it disappears 
+            on scrolling down. I am always looking to improve myself, and prompt 
+            engineering has been a golden gateway into improving productivity.
+            <br/><br/>
             This, in combination of looking to learn much more about how to make 
             bigger projects and having others to learn from, is what is pushing 
             me into this direction.
-          </p>
-          <p>
+            <br/><br/>
             Ive been working to get certifications for initially front end 
             development, but want to branch out into full stack development 
             in order to build large projects that I want to do later on.
@@ -199,29 +202,6 @@ class Experience extends Component {
     );
   }
 }
-
-{/**
-<div id="certifications">
-  <h3>Here are some certifications I have, and ones I am gunning for in the future</h3>
-  <ul className="noMarkers">
-    <li>
-      <a href="https://www.freecodecamp.org/certification/Mackenzie-May/responsive-web-design">
-        <img src={responsiveWebDesignCertificate} alt="responsiveCert" width="500" display="block"/>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.freecodecamp.org/certification/Mackenzie-May/javascript-algorithms-and-data-structures">
-        <img src={javascriptCertificate} alt="javascriptCert" width="500" display="block"/>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.freecodecamp.org/certification/Mackenzie-May/front-end-development-libraries">
-        <img src={frontEndCertificate} alt="frontendCert" width="500" display="block"/>
-      </a>
-    </li>
-  </ul>
-</div>
-*/}
 
 class Contact extends Component {
   render(){
