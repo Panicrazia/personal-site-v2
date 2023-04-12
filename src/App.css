@@ -1,5 +1,7 @@
 :root {
   --darkPurple: #261328;
+  --darkPurpleLightTransparent: hsla(294 52% 50% / 0.15);
+  --darkPurpleDarkTransparent: hsla(294 52% 50% / 0.55);
   --cardGradient: linear-gradient(140deg, rgba(236,90,40,1) 0%,
     rgba(236,90,40,1) 17%,
     rgba(241,133,35,1) 36%,
@@ -47,6 +49,7 @@
 
 a{
   color: inherit;
+  text-decoration: none;
 }
 
 #heroSection {
@@ -194,6 +197,23 @@ section {
 #certifications li{
   padding: 1rem;
 }
+.certificate{
+  padding: .5rem;
+  border: 2px solid var(--darkPurple);
+  border-radius: 1rem;
+  background-color: var(--darkPurpleLightTransparent);
+  transition: border-radius .3s, background-color .3s; 
+  color: inherit;
+  text-decoration: none;
+}
+.certificate:hover{
+  background-color: var(--darkPurpleDarkTransparent);
+  border-radius: .5rem;
+  color: var(--darkPurple)
+}
+.certificateHeader{
+  margin: 0;
+}
 
 #languages{
   background: var(--cardGradientFallback);
@@ -244,6 +264,9 @@ section {
   #certifications {
     max-width: 100%;
   }
+  #contactSection{
+    max-width: 100%;
+  }  
   #aboutSection {
     grid-template-columns: 1fr;
   }
