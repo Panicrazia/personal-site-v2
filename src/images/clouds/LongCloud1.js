@@ -1,11 +1,26 @@
-import React, {Component, useLayoutEffect, useRef} from 'react';
+import React, {Component, useLayoutEffect, useRef,useState} from 'react';
 import { gsap } from 'gsap';
 
 const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
-function LongCloud1({classProp, width}) {
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  console.log(size);
+  return size;
+}
+
+function LongCloud1({classProp, width, innerWidth}) {
     const cloud = useRef();
     const circle = useRef();
+    const [windowWidth, windowHeight] = useWindowSize();
     
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
@@ -14,28 +29,29 @@ function LongCloud1({classProp, width}) {
             right: /*  -window.innerWidth  */- (width * rem),
         },
         {
-            right: window.innerWidth-1,//TODO: this should be longer, so there 
+            right: windowWidth+1,//TODO: this should be longer, so there 
             // is no chance of it stopping on resizing the window
             //xPercent: -100,
             duration: 20,
             repeat: -1,//-1
             ease: 'none',
             repeatDelay: 2,
+            repeatRefresh: true,
         });
         }, cloud);// <- Scope!
         
         return () => ctx.revert();
-    }, []);
+    }, [width, windowWidth]);
   
     return (
         <div ref={cloud}>
             <svg width={width+"rem"} version="1.1" viewBox="0 0 230.71 30" xmlns="http://www.w3.org/2000/svg" /* fill="currentColor" */ className={"cloud "+classProp}>
             <defs>
                 <linearGradient id="sunray" x1="0.5" y1="0" x2="0.5" y2="1">
-                <stop offset="0%" stop-color="#fff930"/>
-                <stop offset="38%" stop-color="#ff9a00"/>
-                <stop offset="82%" stop-color="#ff515a"/>
-                <stop offset="100%" stop-color="#ff00bd"/>
+                <stop offset="0%" stopColor="#fff930"/>
+                <stop offset="38%" stopColor="#ff9a00"/>
+                <stop offset="82%" stopColor="#ff515a"/>
+                <stop offset="100%" stopColor="#ff00bd"/>
                 </linearGradient>
             </defs>
             <g transform="translate(-2.6064 -90)" fill="url(#sunray)">
