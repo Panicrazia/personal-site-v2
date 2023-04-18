@@ -120,7 +120,7 @@ class CloudMachine extends Component {
   render(){
     return (
       <div className="cloudMachine">
-        <LongCloud1 classProp={"cloudTest"} width={"300"}/>
+        <LongCloud1 classProp={"cloudTest"} width={"300"} innerWidth={window.innerWidth}/>
       </div>
       
     )
