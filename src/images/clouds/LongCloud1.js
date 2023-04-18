@@ -26,7 +26,7 @@ function LongCloud1({classProp, width, innerWidth}) {
         const ctx = gsap.context(() => {
 
         gsap.fromTo(".cloud", {
-            right: /*  -window.innerWidth  */- (width * rem),
+            right: /*  -window.innerWidth  */- ((width * rem)+100),
         },
         {
             right: windowWidth+1,//TODO: this should be longer, so there 

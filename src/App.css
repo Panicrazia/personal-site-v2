@@ -155,7 +155,6 @@ section {
 
 
 #aboutSection {
-  max-width:50rem;
   text-align: justify;
   display: grid;
   grid-template-columns: 3fr 2fr;
