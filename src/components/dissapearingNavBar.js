@@ -55,5 +55,4 @@ const Navbar2 = () => {
 <IconLogo classProp="starLogoSvg ringColor" width="50" height="50"/>&nbsp;Mackenzie May
 */}
 
-
 export default Navbar2;

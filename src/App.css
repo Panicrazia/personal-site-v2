@@ -157,9 +157,13 @@ section {
 #aboutSection {
   text-align: justify;
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 3fr 1fr;
   gap: 2rem;
 }
+/*
+when the picture is added this is probably a better grid column
+grid-template-columns: 3fr 2fr;
+*/
 
 .aboutBackground {
   padding: 1rem;

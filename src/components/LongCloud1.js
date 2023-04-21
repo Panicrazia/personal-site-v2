@@ -3,6 +3,17 @@ import { gsap } from 'gsap';
 
 const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
+class CloudMachine extends Component {
+    render(){
+        return (
+            <div className="cloudMachine">
+            <LongCloud1 classProp={"cloudTest"} width={"300"} innerWidth={window.innerWidth}/>
+            </div>
+            
+        )
+    }
+} 
+
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
@@ -26,12 +37,10 @@ function LongCloud1({classProp, width, innerWidth}) {
         const ctx = gsap.context(() => {
 
         gsap.fromTo(".cloud", {
-            right: /*  -window.innerWidth  */- ((width * rem)+100),
+            right: -((width * rem)+100),
         },
         {
-            right: windowWidth+1,//TODO: this should be longer, so there 
-            // is no chance of it stopping on resizing the window
-            //xPercent: -100,
+            right: windowWidth+1,
             duration: 20,
             repeat: -1,//-1
             ease: 'none',
@@ -62,7 +71,7 @@ function LongCloud1({classProp, width, innerWidth}) {
     );
 }
 
-export default LongCloud1;
+export default CloudMachine;
 
 
   
