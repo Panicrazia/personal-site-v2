@@ -62,12 +62,12 @@ p{
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   color: var(--darkPurple);
+  min-height: 900px;
 }
 
 #heroContainer {
-  height: 40vh;
+  top: 26vh;
   width: 100%;
   max-width: 400px;
   position: relative;
@@ -273,6 +273,9 @@ grid-template-columns: 3fr 2fr;
 }
 
 @media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
   #languages{
     max-width: 100%;
   }
