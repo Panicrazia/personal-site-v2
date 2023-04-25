@@ -29,8 +29,10 @@
   --cardGradientFallback: rgba(241,133,35,1);
   --electricYellow: #FCFE2F;
   --brightPurple: #9A44B7;
-  --contactGradient: linear-gradient(180deg, rgba(250,175,36,1) 5%, rgba(254,80,16,1) 25%, rgba(250,88,36,1) 40%, rgba(250,36,204,1) 100%);
-  
+  --contactGradient: linear-gradient(180deg, rgba(250,175,36,1) 5%, 
+    rgba(254,80,16,1) 25%, 
+    rgba(250,88,36,1) 40%,  
+    rgba(250,36,204,1) 100%);
 }
 
 .starLogoSvg {
@@ -157,7 +159,6 @@ section {
   z-index: 0;
 }
 
-
 #aboutSection {
   text-align: justify;
   display: grid;
@@ -266,7 +267,6 @@ grid-template-columns: 3fr 2fr;
   background-color: var(--darkPurpleDarkTransparent);
   text-decoration:none;
 }
-
 
 #contactButton {
   margin: 0;

@@ -1,3 +1,3 @@
 module.exports = {
-    email: 'panicrazia@gmail.com',
-}
+  email: "panicrazia@gmail.com",
+};

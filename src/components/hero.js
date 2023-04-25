@@ -1,32 +1,29 @@
-import React, {Component, useLayoutEffect, useRef} from 'react';
+import React, { Component, useLayoutEffect, useRef } from "react";
 
 class Hero extends Component {
-    render(){
-        return (
-        <section id="heroSection">
-            <div id="heroContainer">
-            {/** 
+  render() {
+    return (
+      <section id="heroSection">
+        <div id="heroContainer">
+          {/** 
             <Image fluid src="https://media.geeksforgeeks.org/wp-content/uploads/20210425000233/test-300x297.png" roundedCircle="true"></Image>
             */}
-                <div>
-                    <h1>
-                        Mackenzie May
-                    </h1>
-                </div>
-                <div>
-                    <h2>
-                        the Quest for Healthcare
-                    </h2>
-                </div>
-            </div>
-        </section>
-        );
-    }
+          <div>
+            <h1>Mackenzie May</h1>
+          </div>
+          <div>
+            <h2>the Quest for Healthcare</h2>
+          </div>
+        </div>
+      </section>
+    );
+  }
 }
 
 export default Hero;
-  
-{/* maybe have a random title or a title that keeps switching out?
+
+{
+  /* maybe have a random title or a title that keeps switching out?
 celestial architect (when the site is in full starmode)
 front end developer
 software dude (force this after celestial architect)
@@ -62,5 +59,8 @@ tarot reader
 bad at smash bros
 noun verber
 mahjonger
-*/}
-{/**Front End Developer */}
+*/
+}
+{
+  /**Front End Developer */
+}
