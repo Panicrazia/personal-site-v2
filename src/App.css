@@ -250,11 +250,20 @@ grid-template-columns: 3fr 2fr;
   border-radius: 3rem;
   padding: .75rem;
   margin:0;
-  background-color: lightpink;
+  color: var(--electricYellow);
+  background-color: var(--darkPurple);
   text-decoration:none;
   display:inline-block;
   width: 75%;
+  transition: border-radius .3s, background-color .3s; 
 }
+#emailLink:hover{
+  border-radius: 1rem;
+  color: var(--electricYellow);
+  background-color: var(--darkPurpleDarkTransparent);
+  text-decoration:none;
+}
+
 
 #contactButton {
   margin: 0;
