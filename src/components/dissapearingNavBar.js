@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Container, Nav, Navbar, Image } from "react-bootstrap";
 import Logo from "../images/StarMLogo.svg";
 import IconLogo from "../components/icons/logo";
@@ -6,13 +6,19 @@ import IconSynthLogo from "../components/icons/personal synthwave logo.js";
 
 const Navbar2 = () => {
   const [visible, setVisible] = useState(true);
+  const [activeSection, setActiveSection] = useState(null);
 
   useEffect(() => {
     let prevScrollpos = window.pageYOffset;
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
+      const sections = document.querySelectorAll("section[id]");
       setVisible(prevScrollpos > currentScrollPos || currentScrollPos < 60);
       prevScrollpos = currentScrollPos;
+      const newActiveSection = [...sections]
+        .reverse()
+        .find((section) => currentScrollPos >= section.offsetTop - 100);
+      setActiveSection(newActiveSection ? newActiveSection.id : null);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -39,9 +45,15 @@ const Navbar2 = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#aboutSection">About</Nav.Link>
-              <Nav.Link href="#experienceSection">Experience</Nav.Link>
-              <Nav.Link href="#contactSection">Contact</Nav.Link>
+              <Nav.Link href="#aboutSection" active={activeSection === "aboutSection"}>
+                About
+              </Nav.Link>
+              <Nav.Link href="#experienceSection" active={activeSection === "experienceSection"}>
+                Experience
+              </Nav.Link>
+              <Nav.Link href="#contactSection" active={activeSection === "contactSection"}>
+                Contact
+              </Nav.Link>
               <Nav.Link href="#home">Resume</Nav.Link>
             </Nav>
           </Navbar.Collapse>
