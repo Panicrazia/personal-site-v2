@@ -13,7 +13,8 @@ const gridStyles = {
 const Certifications = () => {
   return (
     <div id="certifications">
-        <h3>Here are some certifications I have, and ones I am gunning for in the future</h3>
+        <h3>Here are some certifications I have</h3>
+        <p>I am always looking to learn new things and expand my abilities</p>
         <div className="noMarkers " style={gridStyles}>
             <a className="certificate" href="https://www.freecodecamp.org/certification/Mackenzie-May/responsive-web-design">
                 <p className="certificateHeader">Responsive Web Design</p>

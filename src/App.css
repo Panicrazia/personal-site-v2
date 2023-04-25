@@ -52,6 +52,10 @@ a{
   text-decoration: none;
 }
 
+p{
+  font-weight: 600;
+}
+
 #heroSection {
   height: 100vh;
   display: flex;
@@ -169,7 +173,6 @@ grid-template-columns: 3fr 2fr;
   padding: 1rem;
   background: var(--cardGradientFallback);
   background: var(--cardGradient);
-  font-weight: 600;
   border-radius: 1rem;
   border-bottom: solid 2px var(--electricYellow);
   border-right: solid 2px var(--electricYellow);
@@ -241,7 +244,6 @@ grid-template-columns: 3fr 2fr;
   padding: 1rem;
   margin: auto;
   border-radius: 1rem;
-  font-weight: 600;
   border-top: solid 2px var(--electricYellow);
 }
 
@@ -255,6 +257,7 @@ grid-template-columns: 3fr 2fr;
   text-decoration:none;
   display:inline-block;
   width: 75%;
+  font-weight: 600;
   transition: border-radius .3s, background-color .3s; 
 }
 #emailLink:hover{
