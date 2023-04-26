@@ -54,7 +54,13 @@ const Navbar2 = () => {
               <Nav.Link href="#contactSection" active={activeSection === "contactSection"}>
                 Contact
               </Nav.Link>
-              <Nav.Link href="#home">Resume</Nav.Link>
+              <Nav.Link
+                id="resumeButton"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                Resume
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

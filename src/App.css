@@ -64,6 +64,19 @@ section {
   padding: 16rem 0;
 }
 
+#resumeButton{
+  border: 2px solid var(--electricYellow);
+  border-radius: .75rem;
+  padding: 0.4rem 0.5rem;
+  text-decoration: none;
+  color: var(--electricYellow);
+  margin-left: .5rem;
+  transition: border-radius .3s; 
+}
+#resumeButton:hover{
+  border-radius: .3rem;
+}
+
 #heroSection {
   padding-top: 3rem;
   height: 100vh;
