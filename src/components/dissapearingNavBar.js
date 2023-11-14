@@ -31,33 +31,45 @@ const Navbar2 = () => {
         top: visible ? "0" : "-76px",
         left: 0,
         right: 0,
-        height: "76px",
+        //height: "76px",
         backgroundColor: "#fff",
         boxShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
         zIndex: "1000",
         transition: "top 0.3s",
       }}>
-      <Navbar collapseOnSelect bg="dark" expand="lg" variant="dark">
-        <Container>
+      <Navbar collapseOnSelect bg="dark" expand="sm" variant="dark">
+        <Container className="justify-content-end">
+          {/**
           <Navbar.Brand href="#heroSection">
             <IconSynthLogo width="50" height="50" />
           </Navbar.Brand>
+           */}
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="#aboutSection" active={activeSection === "aboutSection"}>
+          <Navbar.Collapse id="responsive-navbar-nav justify-content-center">
+            <Nav className="ms-auto justify-content-around w-100">
+              <Nav.Link
+                href="#aboutSection"
+                data-toggle="pill"
+                active={activeSection === "aboutSection"}>
                 About
               </Nav.Link>
-              <Nav.Link href="#experienceSection" active={activeSection === "experienceSection"}>
+              <Nav.Link
+                href="#experienceSection"
+                data-toggle="pill"
+                active={activeSection === "experienceSection"}>
                 Experience
               </Nav.Link>
-              <Nav.Link href="#contactSection" active={activeSection === "contactSection"}>
+              <Nav.Link
+                href="#contactSection"
+                data-toggle="pill"
+                active={activeSection === "contactSection"}>
                 Contact
               </Nav.Link>
               <Nav.Link
                 id="resumeButton"
                 href="/resume.pdf"
                 target="_blank"
+                data-toggle="pill"
                 rel="noopener noreferrer">
                 Resume
               </Nav.Link>

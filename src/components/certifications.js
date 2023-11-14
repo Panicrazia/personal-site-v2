@@ -12,7 +12,7 @@ const gridStyles = {
 //responsiveGrid
 const Certifications = () => {
   return (
-    <div id="certifications">
+    <div className="sectionBackground" id="certifications">
       <h3>Here are some certifications I have</h3>
       <p>I am always looking to learn new things and expand my abilities</p>
       <div className="noMarkers " style={gridStyles}>

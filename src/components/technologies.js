@@ -19,7 +19,7 @@ import GodotLogo from "./icons/godot";
 class Technologies extends Component {
   render() {
     return (
-      <div id="languages">
+      <div className="sectionBackground" id="languages">
         <h3>Some technologies Ive used to make things</h3>
         <ul className="noMarkers sideList">
           {/** */}

@@ -12,9 +12,15 @@ class Hero extends Component {
             <h1>Mackenzie May</h1>
           </div>
           <div>
-            <h2>the Quest for Healthcare</h2>
+            <h2>Software Developer</h2>
           </div>
         </div>
+        {/**
+         * 
+        <div id="heroContainer2">
+        </div>
+
+         */}
       </section>
     );
   }
@@ -26,7 +32,7 @@ export default Hero;
   /* maybe have a random title or a title that keeps switching out?
 celestial architect (when the site is in full starmode)
 front end developer
-software dude (force this after celestial architect)
+software dev (force this after celestial architect)
 boardgamer
 dead god
 website maker

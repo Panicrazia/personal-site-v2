@@ -5,7 +5,7 @@ class Contact extends Component {
   render() {
     return (
       <section id="contactSection">
-        <div id="contactEmail">
+        <div className="sectionBackground" id="contactEmail">
           <h3>Want to talk?</h3>
           <p>
             Im looking for new opportunities and learning experiences, if you think I might be a

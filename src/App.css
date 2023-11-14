@@ -1,7 +1,7 @@
 :root {
-  --darkPurple: #261328;
-  --darkPurpleLightTransparent: hsla(294 52% 50% / 0.15);
-  --darkPurpleDarkTransparent: hsla(294 52% 50% / 0.55);
+  --darkPurple: #000025;
+  --darkPurpleLightTransparent: hsla(240 100% 14% / 0.15);
+  --certificateHoverColor: #28549C;
   --cardGradient: linear-gradient(140deg, rgba(236,90,40,1) 0%,
     rgba(236,90,40,1) 17%,
     rgba(241,133,35,1) 36%,
@@ -27,12 +27,16 @@
     rgba(250,175,36,1) 68%,
     rgba(250,175,36,1) 100%);
   --cardGradientFallback: rgba(241,133,35,1);
+  --technologiesHoverColor: #2EA1DF;
+  --electricAccent: #2DC9F8;
   --electricYellow: #FCFE2F;
   --brightPurple: #9A44B7;
   --contactGradient: linear-gradient(180deg, rgba(250,175,36,1) 5%, 
     rgba(254,80,16,1) 25%, 
     rgba(250,88,36,1) 40%,  
     rgba(250,36,204,1) 100%);
+  
+    background-color: var(--darkPurple);
 }
 
 .starLogoSvg {
@@ -65,11 +69,11 @@ section {
 }
 
 #resumeButton{
-  border: 2px solid var(--electricYellow);
+  border: 2px solid var(--electricAccent);
   border-radius: .75rem;
   padding: 0.4rem 0.5rem;
   text-decoration: none;
-  color: var(--electricYellow);
+  color: var(--electricAccent);
   margin-left: .5rem;
   transition: border-radius .3s; 
 }
@@ -93,6 +97,15 @@ section {
   max-width: 400px;
   position: relative;
 }
+/*
+#heroContainer2 {
+  top: 56vh;
+  width: 100%;
+  max-width: 400px;
+  position: absolute;
+  color: white;
+}
+*/
 
 #content {
   display: flex;
@@ -117,14 +130,14 @@ section {
 .svgHolder {
   height: 40px;
   width: auto;
-  color: #3D0060;
+  color: var(--certificateHoverColor);
   fill: currentColor;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .svgHolder:hover {
-  color: #2A3E87;
+  color: var(--technologiesHoverColor);
   fill: url(#sunray);
   /* border: 3px solid rgb(218, 211, 211); */
   /* background: rgb(231,242,255);
@@ -145,7 +158,7 @@ section {
 }
 
 .pythonColors:hover{
-  --bottomSnakeColor: var(--electricYellow);
+  --bottomSnakeColor: var(--electricAccent);
 }
 
 .cloudTest{
@@ -183,7 +196,7 @@ section {
 when the picture is added this is probably a better grid column
 grid-template-columns: 3fr 2fr;
 */
-
+/*
 .aboutBackground {
   padding: 1rem;
   background: var(--cardGradientFallback);
@@ -192,9 +205,23 @@ grid-template-columns: 3fr 2fr;
   border-bottom: solid 2px var(--electricYellow);
   border-right: solid 2px var(--electricYellow);
 }
+*/
+.aboutBackground p {
+  margin-bottom: 0;
+}
 
-.aboutBackground:last-of-type {
-  padding-bottom: 0;
+.imageCircle {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: solid 2px var(--electricAccent);
+}
+
+.sectionBackground {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: solid 1px var(--electricAccent);
+  background: var(--darkPurple);
+  color: var(--electricAccent);
 }
 
 #experienceSection{
@@ -202,16 +229,18 @@ grid-template-columns: 3fr 2fr;
 }
 
 #certifications {
+  /*
   background: var(--cardGradientFallback);
   background: var(--certsGradient);
+  */
   right: 0;
   padding: 1rem;
   margin-left: auto;
   margin-bottom: 2rem;
   font-weight: 700;
   border-radius: 1rem;
-  border-bottom: solid 2px var(--electricYellow);
-  border-left: solid 2px var(--electricYellow);
+  border-bottom: solid 2px var(--electricAccent);
+  border-left: solid 2px var(--electricAccent);
   max-width: 38rem;
   width: 100%;
 }
@@ -228,24 +257,27 @@ grid-template-columns: 3fr 2fr;
   text-decoration: none;
 }
 .certificate:hover{
-  background-color: var(--darkPurpleDarkTransparent);
+  background-color: var(--certificateHoverColor);
   border-radius: .5rem;
-  color: var(--darkPurple)
+  color: inherit;
 }
+
 .certificateHeader{
   margin: 0;
 }
 
 #languages{
+  /*
   background: var(--cardGradientFallback);
   background: var(--languagesGradient);
+  */
   left: 0;
   padding: 1rem;
   max-width: 35rem;
   margin-right: auto;
   border-radius: 1rem;
-  border-top: solid 2px var(--electricYellow);
-  border-right: solid 2px var(--electricYellow);
+  border-top: solid 2px var(--electricAccent);
+  border-right: solid 2px var(--electricAccent);
 }
 
 #contactSection{
@@ -253,21 +285,23 @@ grid-template-columns: 3fr 2fr;
 }
 
 #contactEmail {
+  /*
   background: var(--cardGradientFallback);
   background: var(--contactGradient);
+  */
   left: 0;
   padding: 1rem;
   margin: auto;
   border-radius: 1rem;
-  border-top: solid 2px var(--electricYellow);
+  border-top: solid 2px var(--electricAccent);
 }
 
 #emailLink{
-  border: 2px solid purple;
+  border: 2px solid var(--certificateHoverColor);
   border-radius: 3rem;
   padding: .75rem;
   margin:0;
-  color: var(--electricYellow);
+  color: var(--electricAccent);
   background-color: var(--darkPurple);
   text-decoration:none;
   display:inline-block;
@@ -277,8 +311,9 @@ grid-template-columns: 3fr 2fr;
 }
 #emailLink:hover{
   border-radius: 1rem;
-  color: var(--electricYellow);
-  background-color: var(--darkPurpleDarkTransparent);
+  border: 2px solid var(--electricAccent);
+  color: var(--electricAccent);
+  background-color: var(--certificateHoverColor);
   text-decoration:none;
 }
 

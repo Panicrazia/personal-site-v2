@@ -11,7 +11,7 @@
 }
 
 :root {
-  --darkPurple: #261328;
+  --darkPurple: #000025;
   --cardGradient: linear-gradient(140deg, rgba(236,90,40,1) 0%,
     rgba(236,90,40,1) 17%,
     rgba(241,133,35,1) 36%,
